@@ -3,19 +3,22 @@ package Inheritance;
 public class Developer extends Employee {
 
     private String coreLang;
+    private double bonus=0.12;
 
     public Developer(String name, String address, double salary, String jobTitle, String coreLang) {
         super(name, address, salary, jobTitle);
         this.coreLang = coreLang;
+
     }
 
     public String getCoreLang() {
         return coreLang;
     }
 
-    public double calcBonus(){
-        return getSalary() * 0.5;
+    public double getBonus(){
+        return bonus;
     }
+
 
     @Override
     public String toString() {

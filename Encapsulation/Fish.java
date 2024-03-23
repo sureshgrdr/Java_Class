@@ -18,7 +18,6 @@
 
     }
 
-
     // Getters and Setters
         public String getFishName() {
         return fishName;

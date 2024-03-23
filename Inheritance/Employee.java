@@ -6,6 +6,7 @@ public class Employee {
     private String address;
     private double salary;
     private String jobTitle;
+    private double bonus = 0.0;
     
     public Employee(String name, String address, double salary, String jobTitle) {
         this.name = name;
@@ -29,9 +30,13 @@ public class Employee {
     public String getJobTitle() {
         return jobTitle;
     }
+    public double getBonus(){
+        return bonus;
+    }
 
-    public double calcBonus(){
-        return getSalary() * 0.0;
+    //Print Bonus
+    public void calcBonus(){
+        System.out.println("\n" + this.name + " is working as "+ this.jobTitle + " is entitled to get a bonus of Rs: " + getSalary() * getBonus());
     }
 
     @Override

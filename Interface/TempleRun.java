@@ -16,12 +16,12 @@ public class TempleRun implements GameMenu {
 
     @Override
     public void restart() {
-       System.out.println("Lets start again...");
+       System.out.println("Start again...");
     }
 
     @Override
     public void quit() {
-       System.out.println("i cant take this any more...");
+       System.out.println("i can't take this any more...");
     }
     
 }

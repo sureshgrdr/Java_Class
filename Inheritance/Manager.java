@@ -3,6 +3,7 @@ package Inheritance;
 public class Manager extends Employee {
 
     private int subordinates;
+    private double bonus=0.18;
 
     public Manager(String name, String address, double salary, String jobTitle, int subordinates){
         super(name,address,salary,jobTitle);
@@ -12,10 +13,11 @@ public class Manager extends Employee {
     public int getSubordinates() {
         return subordinates;
     }
-     
-    public double calcBonus(){
-        return getSalary() * 0.18;
+    public double getBonus(){
+        return bonus;
     }
+
+     
 
     @Override
     public String toString() {

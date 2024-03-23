@@ -11,15 +11,16 @@ public class Main {
         Manager manager1 =new Manager("James", "pattinambakkam", 35000, "Manager", 10);
         employees.add(manager1);
 
-
-        System.out.println(manager1.calcBonus());
+        //Bonus Calculation
+        manager1.calcBonus();
 
         Developer dev1 =new Developer("Ambani", "Koyambedu", 25000, "Developer", "Java");
         employees.add(dev1);
 
-        System.out.println(dev1.calcBonus());
+        //Bonus Calculation
+        dev1.calcBonus();
 
-        for(Employee emp : employees) System.out.println(emp);
+        // for(Employee emp : employees) System.out.println(emp);
 
     }
     
