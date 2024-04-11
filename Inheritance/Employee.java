@@ -36,7 +36,8 @@ public class Employee {
 
     //Print Bonus
     public void calcBonus(){
-        System.out.println("\n" + this.name + " is working as "+ this.jobTitle + " is entitled to get a bonus of Rs: " + getSalary() * getBonus());
+        System.out.println("\n" + this.name + " is working as "+ this.jobTitle + " is entitled to get a bonus of Rs: " + getSalary() * getBonus()
+        +"\n");
     }
 
     @Override

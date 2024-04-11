@@ -1,10 +1,9 @@
 package Abstract;
 
-class SBI extends Bank{
+public class SBI extends Bank {
 
-    @Override
-    public double getBalance() {
-       return balance;
+    public SBI() {
+        super("SBI", 8.5f);
     }
-    
+   
 }

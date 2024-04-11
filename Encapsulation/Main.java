@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Main{
-    private static final char[] Fish = null;
+    // private static final char[] Fish = null;
 
 	public static void main(String[] args){
 
