@@ -13,7 +13,7 @@ public class Main {
         while (isAppOpen) {
 
             System.out.println(
-                    "Select from below \n 1.Register Students\n 2.Find by ID \n 3.Delete by ID \n 4.Fetch All \n 5.Exist the Application");
+                    "\nSelect from below \n 1.Register Students\n 2.Find by ID \n 3.Delete by ID \n 4.Fetch All \n 5.Exist the Application");
 
             // option = scanner.nextInt();
             // if (scanner.hasNextInt()) {
@@ -37,10 +37,10 @@ public class Main {
                     break;
                 case 5:
                     isAppOpen = false;
-                    System.out.println("Application Closed...!");
+                    System.out.println("Application Closed...!\n");
                     break;
                 default:
-                    System.out.println("Invalid Option...!");
+                    System.out.println("Invalid Option...!\n");
                     break;
             }
         }

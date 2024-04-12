@@ -15,17 +15,23 @@ public class StudentActions {
     public void registerStudents() {
 
         // Get data from User
-        System.out.println("\nSTUDENT REGISTRATION\nEnter Student Name:");
+        System.out.println("\n--STUDENT REGISTRATION--\nEnter Student Name:");
         String studName = scanner.nextLine(); // Get StudentName from user and store in a string
         System.out.println("Enter Date of Birth:(YYYY-MM-DD)");
         String dob = scanner.nextLine(); // Get dateofbirth from user and store in a string
 
-        // Create Instance of StudentDetails and pass the above vaue as Arguments
-        StudentDetails stud1 = new StudentDetails(studID, studName, dob);
-        studentList.add(stud1); // After creation Push it to List
-        studID++; // Post Increament student id for the next registration
+        // check if student name and dob is not Empty
+        if (studName != "" && dob != "") {
+            // Instance of StudentDetails and pass the above vaue as Arguments
+            StudentDetails stud1 = new StudentDetails(studID, studName, dob);
+            studentList.add(stud1); // After creation Push it to List
+            studID++; // Post Increament student id for the next registration
 
-        System.out.println("\nStudent registered successfully...!\n");
+            System.out.println("\nStudent registered successfully...!\n");
+        } else {
+            System.out.println("\nStudent is not registered...!\n");
+        }
+
     }
 
     // Find by ID
@@ -34,7 +40,7 @@ public class StudentActions {
         if (checkListEmpty())
             return;
 
-        System.out.println("Enter Student ID:");
+        System.out.println("\n--SEARCH STUDENT--\nEnter Student ID:");
         int inID = scanner.nextInt(); // Get input ID from user and store
 
         boolean isStudFound = false; // Status of Student Found
@@ -50,7 +56,7 @@ public class StudentActions {
             }
         }
         if (!isStudFound)
-            System.out.println("Student not found...!");
+            System.out.println("Student not found...!\n");
 
     }
 
@@ -61,7 +67,7 @@ public class StudentActions {
             return;
 
         // Get input from user
-        System.out.println("Enter Student ID:\n");
+        System.out.println("\n--DELETE STUDENT--\nEnter Student ID:");
         int inID = scanner.nextInt(); // Get input ID from user and store
         Iterator<StudentDetails> iterator = studentList.iterator();
         boolean isStudFound = false; // Status of Student Found
@@ -70,13 +76,13 @@ public class StudentActions {
             StudentDetails std = iterator.next();
             if (std.getId() == inID) {
                 iterator.remove();
-                System.out.println("Student deleted Successfully...!");
+                System.out.println("Student deleted Successfully...!\n");
                 isStudFound = true; // If Student found change the status
                 break;
             }
         }
         if (!isStudFound)
-            System.out.println("Student not found...!");
+            System.out.println("Student not found...!\n");
     }
 
     // NOT WORKING ///////////////////////////////////////
@@ -92,15 +98,17 @@ public class StudentActions {
         if (checkListEmpty())
             return;
 
+        System.out.println("\n --ALL STUDENT RECORDS--");
         for (StudentDetails std : studentList)
             System.out.println(std);
 
+        System.out.println();
     }
 
     // Check if the list is not empty METHOD
     public boolean checkListEmpty() {
         if (studentList.isEmpty()) {
-            System.out.println("Record is Empty...!");
+            System.out.println("Record is Empty...!\n");
             return true;
         }
         return false;
